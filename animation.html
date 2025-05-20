@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moving Text Animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      overflow: hidden;
+      background: white;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+    }
+
+    .moving-text {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 24px;
+      color: #333;
+      animation: moveText 5s linear infinite;
+    }
+
+    @keyframes moveText {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="moving-text">This sentence is moving from left to right!</div>
+  </div>
+
+</body>
+</html>
